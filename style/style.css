@@ -115,7 +115,7 @@ h1 {
   right: 0; /* il s’étend jusqu’au bord droit */
   background-color: white; /* fond blanc */
   color: black;
-  font-weight: bold;
+  
   padding: 8px 10px;
   text-align: left;
   box-sizing: border-box;
