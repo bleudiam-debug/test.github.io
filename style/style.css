@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "futura";
+  src: url("./fonts/futura-lt-w01-light.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "latin";
+  src: url("./fonts/dinneuzeitgroteskltw01-_812426.latin.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "futura", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles pour le header */
+
+header {
+  display: flex;
+  flex-direction: column;
+  font-family: latin, sans-serif;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px 10px 10px;
+}
+
+h1 {
+  position: absolute;
+  left: 400px;
+  margin: 0;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_bar a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 5px 10px 5px 10px;
+}
+
+.nav_bar a:hover {
+  color: #00b3ff;
+  transition: 0.3s color ease;
+}
+
+.banniere {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  opacity: 0.8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.banner_container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.logo_banniere {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: auto;
+}
+
+/* Bloc cliquable avec images */
+
+.image_cliquable {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.image_link {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.image_link img {
+  display: block;
+  width: 300px;
+  transition: 0.3s ease;
+}
+
+.texte_image {
+  position: absolute;
+  bottom: 0;
+  left: 30%; /* le rectangle commence à 50 % de la largeur */
+  right: 0; /* il s’étend jusqu’au bord droit */
+  background-color: white; /* fond blanc */
+  color: black;
+  font-weight: bold;
+  padding: 8px 10px;
+  text-align: left;
+  box-sizing: border-box;
+  font-family: futura, sans-serif;
+  font-size: large;
+}
+
+.image_link:hover img {
+  filter: brightness(0.7); /* assombrit l’image au survol */
+}
+
+/* style offre parrainage */
+
+.offre_parrainage {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 75px;
+  padding-right: 200px;
+  position: relative; /* pour que le ::before soit positionné par rapport à ce bloc */
+}
+
+.offre_parrainage::before {
+  content: "";
+  position: absolute;
+  left: 400px; /* largeur du texte */
+  top: 0;
+  bottom: 0;
+  right: 0; /* jusqu’au bord droit */
+  background-color: #f0f0f0; /* couleur du background */
+  z-index: 0; /* derrière le contenu */
+}
+
+.texte_parrainage {
+  flex: 0 0 50%;
+  font-size: 18px;
+  color: #333;
+  width: 400px;
+  padding-right: 250px;
+  z-index: 1; /* devant le background */
+}
+
+.image_parrainage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  overflow: hidden;
+  z-index: 1; /* devant le background */
+}
+
+.image_parrainage img {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.titre_offre_parrainage {
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: #00b3ff;
+}
+
+/* style reseaux sociaux */
+
+.footer_reseaux {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+.footer_reseaux .social_media_icons {
+  display: flex; /* permet de manipuler les icônes */
+  justify-content: center; /* centre les icônes horizontalement */
+  gap: 20px; /* espace entre les icônes */
+  margin-top: 100px; /* petit espace au-dessus */
+  transform: scale(3);
+}
+
+.footer_reseaux h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #00b3ff;
+}
+
+/* style bas de page */
+
+footer {
+  background-color: #000000;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #666;
+}
