@@ -69,6 +69,10 @@ h1 {
   font-weight: bold;
   color: #000;
 }
+h1 a {
+  text-decoration: none; /* enlève le soulignement */
+  color: black; /* couleur normale du texte */
+}
 
 .navigation {
   display: flex;
@@ -245,9 +249,13 @@ h1 {
 .footer_reseaux .social_media_icons {
   display: flex; /* permet de manipuler les icônes */
   justify-content: center; /* centre les icônes horizontalement */
-  gap: 20px; /* espace entre les icônes */
-  margin-top: 100px; /* petit espace au-dessus */
-  transform: scale(3);
+  gap: 40px; /* espace entre les icônes */
+  margin-top: 50px; /* petit espace au-dessus */
+}
+.footer_reseaux .social_media_icons img {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s ease;
 }
 
 .footer_reseaux h2 {
@@ -318,13 +326,14 @@ footer {
     justify-items: center;
     align-items: center;
     gap: 30px;
-    padding: 40px 10%;
+    padding: 0 5%;
   }
 
   .image_link img {
     width: 100%;
     max-width: 220px;
     height: auto;
+    box-sizing: border-box;
   }
 
   .texte_image {
@@ -354,7 +363,7 @@ footer {
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 40px 5%;
+    padding: 100px 5%;
     margin: 0 auto;
     position: relative;
   }
@@ -364,7 +373,7 @@ footer {
     bottom: 0;
     right: 0;
     height: 500px;
-    width: 100%;
+
     transform: translateY(-50%);
     padding-top: 50px;
   }
@@ -391,7 +400,7 @@ footer {
   .footer_reseaux {
     text-align: center;
     margin-top: 100px;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
     margin-left: 50px;
     margin-right: 50px;
   }
@@ -399,7 +408,6 @@ footer {
     display: flex; /* permet de manipuler les icônes */
     justify-content: center; /* centre les icônes horizontalement */
     gap: 20px; /* espace entre les icônes */
-    margin-top: 100px; /* petit espace au-dessus */
-    transform: scale(2);
+    margin-top: 50px; /* petit espace au-dessus */
   }
 }
