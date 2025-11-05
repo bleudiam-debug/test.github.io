@@ -1,3 +1,13 @@
+// Désactive la restauration automatique du scroll
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+// Au chargement, forcer le scroll en haut
+window.addEventListener('load', function() {
+    window.scrollTo(0, 0);
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.image_link');
 
@@ -5,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const windowHeight = window.innerHeight;
         images.forEach(img => {
             const elementTop = img.getBoundingClientRect().top;
-            const revealPoint = 150;
+            const revealPoint = 300;
             if(elementTop < windowHeight - revealPoint){
                 img.classList.add('visible');
             }
@@ -22,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function revealParrainage() {
         const windowHeight = window.innerHeight;
         const elementTop = parrainage.getBoundingClientRect().top;
-        const revealPoint = 150; // distance avant que l'animation se déclenche
+        const revealPoint = 300; // distance avant que l'animation se déclenche
 
         if (elementTop < windowHeight - revealPoint) {
             parrainage.classList.add('visible');
@@ -31,4 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', revealParrainage);
     revealParrainage(); // pour vérifier dès le chargement si le bloc est déjà visible
+});
+
+const burgerIcon = document.getElementById("icons");
+const navMenu = document.querySelector(".navigation");
+
+burgerIcon.addEventListener("click", () => {
+  navMenu.classList.toggle("active");    // ouvre/ferme le menu
+  burgerIcon.classList.toggle("active"); // change l'icône burger ↔ croix
 });
