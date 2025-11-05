@@ -58,13 +58,16 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 20px 10px 10px;
+  padding: 15px 5%;
 }
 
 h1 {
   position: absolute;
-  left: 400px;
+  left: 15%; /* ancré à gauche avec une marge fluide */
   margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
 }
 
 .navigation {
@@ -73,13 +76,14 @@ h1 {
   list-style: none;
   padding: 0;
   margin: 0;
+  flex-wrap: wrap;
 }
 
 .nav_bar a {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 10px;
 }
 
 .nav_bar a:hover {
@@ -100,6 +104,8 @@ h1 {
   width: 100%;
   height: 100vh; /* prend toute la fenêtre */
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .logo_banniere {
@@ -113,9 +119,8 @@ h1 {
 
 .icone_fleche {
   position: absolute;
-  bottom: 80px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 10%;
+
   width: 50px;
   height: auto;
   animation: bounce 2s infinite;
@@ -259,4 +264,44 @@ footer {
   padding: 20px 0;
   font-size: 14px;
   color: #666;
+}
+
+#icons {
+  cursor: pointer;
+  display: none;
+  font-size: 1.5rem;
+  margin-left: auto;
+}
+
+@media (max-width: 1024px) {
+  #icons {
+    display: block;
+  }
+  #icons::before {
+    content: "\2630";
+  }
+  #icons.active::before {
+    content: "\2715";
+  }
+  .navigation {
+    position: fixed;
+    left: 200%;
+    top: 43px;
+    padding-bottom: 1%;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s left ease;
+    padding-top: 60px;
+    z-index: 999;
+  }
+  .navigation a {
+    display: block; /* lien prend toute la largeur */
+    font-size: 1.5rem; /* agrandir un peu le texte */
+    text-align: center; /* centre le texte */
+  }
+  .navigation.active {
+    left: 0%;
+  }
 }
