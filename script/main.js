@@ -53,7 +53,7 @@ burgerIcon.addEventListener("click", () => {
 
 async function classify() {
   const vehicle = document.getElementById("vehicle").value;
-  const res = await fetch("http://localhost:3000/api/classify", {
+  const res = await fetch("https://test-github-io-fc30.onrender.com", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ vehicle }),
