@@ -50,3 +50,14 @@ burgerIcon.addEventListener("click", () => {
   navMenu.classList.toggle("active");    // ouvre/ferme le menu
   burgerIcon.classList.toggle("active"); // change l'icône burger ↔ croix
 });
+
+async function classify() {
+  const vehicle = document.getElementById("vehicle").value;
+  const res = await fetch("http://localhost:3000/api/classify", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ vehicle }),
+  });
+  const data = await res.json();
+  document.getElementById("result").innerText = "Type : " + data.category;
+}
