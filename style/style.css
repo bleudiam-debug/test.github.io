@@ -411,3 +411,21 @@ footer {
     margin-top: 50px; /* petit espace au-dessus */
   }
 }
+
+.titre_nos_prestations {
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: #00b3ff;
+}
+
+.liste_supplement {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.find_type {
+  margin-top: 50px;
+  margin-bottom: 100vh;
+  text-align: center;
+}
