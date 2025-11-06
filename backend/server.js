@@ -25,9 +25,9 @@ L'utilisateur peut saisir librement la marque, le modèle, le type ou une descri
 Voici les catégories à utiliser pour classer chaque véhicule :
 
 1. Cabine utilitaire → véhicules utilitaires légers uniquement, camionnettes ou fourgons adaptés à un nettoyage standard (poids < 3,5 tonnes). Ne pas inclure les poids lourds.  
-2. Citadine ou Compacte ou Coupé → petites voitures ou compactes urbaines, citadines, coupés de taille réduite.  
-3. Berline ou Break ou Mini SUV → voitures de taille moyenne, berlines, breaks, petits SUV.  
-4. Grand SUV ou Monospace → SUV de grande taille, grands monospaces ou véhicules familiaux volumineux.  
+2. Citadine / Compacte / Coupé → petites voitures ou compactes urbaines, citadines, coupés de taille réduite.  
+3. Berline / Break / Mini SUV → voitures de taille moyenne, berlines, breaks, petits SUV.  
+4. Grand SUV / Monospace → SUV de grande taille, grands monospaces ou véhicules familiaux volumineux.  
 5. Demande sur mesure → véhicules atypiques, poids lourds, véhicules très grands, luxe, supercars ou tout ce qui ne correspond pas aux catégories ci-dessus.
 
 Instructions :
